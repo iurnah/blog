@@ -1,7 +1,6 @@
 ---
-date: 2015-09-13
 title: "How I Failed the Flare-on Challenge 2015"
-author: Rui Han
+date: 2015-09-13
 categories:
   - Security Competition
 tags:

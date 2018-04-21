@@ -1,5 +1,5 @@
 ---
-title: "Apply Loop Invariants in Binary Search"
+title: "Apply Loop Invariant in Binary Search"
 date: 2016-08-12
 categories:
   - Algorithm

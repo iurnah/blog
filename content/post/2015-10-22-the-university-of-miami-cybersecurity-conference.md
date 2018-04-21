@@ -1,7 +1,6 @@
 ---
-date: 2015-10-22
 title: "The University of Miami Cybersecurity Conference"
-author: Rui Han
+date: 2015-10-22
 categories:
   - Others
 tags:

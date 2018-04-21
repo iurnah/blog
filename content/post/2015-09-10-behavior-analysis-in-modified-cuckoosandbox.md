@@ -1,7 +1,6 @@
 ---
-date: 2015-09-10
 title: "Behavior Analysis in Modified Cuckoo Sandbox "
-author: Rui Han
+date: 2015-09-10
 categories:
   - Malware Analysis
 tags:
