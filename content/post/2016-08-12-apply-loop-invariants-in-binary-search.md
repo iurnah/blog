@@ -15,12 +15,12 @@ When reading the book "Accelerated C++" years ago, I was impressed by the effect
 invariant in ensuring bug-free of many functions implemented in the book. That reading opens
 me another door to formulate and solve some of the error-prone programming problems.  The idea
 of loop invariant is a very simple, and it exists in each for or while loop we wrote. But many
-of us may underestimate its power in solving complex problems. Recently, I discovered a series
-of blog posts in Dr.Dobb's by the author of the book "Accelerated C++", Andrew Koenig. He
-discussed solving problems using the idea of loop invariants. Among these posts, I especially
-interested in his [article series](http://www.drdobbs.com/author/Andrew-Koenig) considering
+programmers may underestimate its power in solving complex problems. Recently, I discovered a
+series of blog posts in Dr.Dobb's by the author of the book "Accelerated C++", Andrew Koenig.
+Among these posts, I especially interested in his [article
+series](http://www.drdobbs.com/author/Andrew-Koenig) discussing
 how to use loop invariant to derive a concise binary search routine, proof its correctness,
-and test it. This post is to summarize the core ideas of Andrew's binary search articles.
+and test the binary search program. This post is to summarize the core ideas of Andrew's binary search articles.
 
 # Part 1 A simple example
 __Binary search invariant:__
@@ -52,7 +52,7 @@ while (begin != end) {
 # Part 2 Refining The Specifications
 __Ordering of the array__
 
-1. C++ allow user to supply the comparison function.
+1. C++ allows user to supply the comparison function.
 2. the sequence being searched must not be out of order.
 
 __Goal to achieve__
@@ -61,15 +61,15 @@ __Goal to achieve__
 > 
 1. If any element in `A` equal to `x`, it return the smallest index of such an element.
 > 
-2. If no element in `A` equal to `x`, it return the smallest index `j`.
+2. If no element in `A` equal to `x`, it return the smallest index `j` to the element greater than `x`.
 
-NB: "has no value equal to x" <==> `x < A[i]` and `A[i] < x` are both false.
+NB: "has no value equal to x" indicates `x < A[i]` and `A[i] < x` are both false.
 
 __Possible return value of this specification__
 
-1. return an index of an element in `A`, the index points to an element that equal to x, 
-   or points to element that `>` x. We can also express it as "the index points to a element that no less than x". <==> `lower_bound`.
-2. return a non index, must be one pass the end. every element must be `<` x.
+1. return an index of an element in `A`, the index points to an element that equal to `x`, 
+   or points to an element that greater than `x`. We can also express it as "the index points to a element that no less than `x`". This is the definitioni from C++ STL `lower_bound` API.
+2. return a non index, must be one pass the end. In this case, every element must be `<` x.
 
 # Part 3 Improving Our Abstractions
 
@@ -165,7 +165,6 @@ size_t linear_search(T x, const T& array, size_t n)
 
     return k;
 }
-
 ```
 
 Transform the while loop from `while (!vless(x, k))` to `while (!(k == n) || !(array[k] < x))` to `while (k != n && array[k] < x)`
@@ -293,7 +292,7 @@ size_t binary_search(T x, const T& array, size_t n)
 # Part 10 Putting It All Together
 Using the strategy discussed in Part 7 to generating test cases. To generate the
 test arrays with length of `n`, we leverage the bit mask trick. Basically, each
-element of `[0, 1, ..., 2^{n-1} - 1]` corresponds to a test case. The bit representation
+element of `$[0, 1, ..., 2^{n-1} - 1]$` corresponds to a test case. The bit representation
 of the current element determine the current test case uniquely. Notice `n` is
 in the range `[0, 32]` if the element is 32-bit integer. 
 
