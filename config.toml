@@ -1,9 +1,9 @@
-baseurl = "blog.rui-han.com"
+baseurl = "https://blog.rui-han.com/"
 languageCode = "en-us"
 title = "A Simple Blog"
 theme = "hugo-xmin"
 googleAnalytics = "UA-117757520-1"
-disqusShortname = "iurnah"
+disqusShortname = "minervawiki"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
@@ -33,4 +33,4 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = ""
-    footer = "&copy; [Rui Han](https://blog.rui-han.com) 2014 -- 2018 | [Github](https://github.com/iurnah) | [Twitter](https://twitter.com/iurnah)"
+    footer = "&copy; [Rui Han](https://blog.rui-han.com) 2012 -- 2018 | [Github](https://github.com/iurnah) | [Twitter](https://twitter.com/iurnah)"
