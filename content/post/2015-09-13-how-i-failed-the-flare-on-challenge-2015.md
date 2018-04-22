@@ -2,7 +2,7 @@
 title: "How I Failed the Flare-on Challenge 2015"
 date: 2015-09-13
 categories:
-  - Security Competition
+  - Security Challenge
 tags:
   - Reverse Binary
 draft: false

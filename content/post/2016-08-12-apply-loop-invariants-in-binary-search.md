@@ -3,10 +3,10 @@ title: "Apply Loop Invariant in Binary Search"
 date: 2016-08-12
 categories:
   - Algorithm
+  - C++
 tags:
   - Binary Search
-  - Loop Invariants
-  - C++
+  - Loop Invariant
 toc: true
 disable_comments: true
 ---
