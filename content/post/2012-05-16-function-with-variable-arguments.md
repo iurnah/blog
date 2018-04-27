@@ -1,7 +1,6 @@
 ---
 title: "Function With Variable Arguments"
 date: 2012-05-16
-draft: false
 categories:
   - C++ 
 tags:

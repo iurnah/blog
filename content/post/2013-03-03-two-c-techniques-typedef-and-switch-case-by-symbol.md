@@ -3,7 +3,6 @@ title: "Two C Techniques: Typedef, Switch by \"Symbol\""
 date: 2013-03-03 
 categories:
   - C++
-draft: false
 toc: false
 draft: false
 ---
