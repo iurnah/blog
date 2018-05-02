@@ -32,13 +32,13 @@ __Implementation 1: Proxy Passively listen and read:__
 
 | 		SockIn Client 		| 	ProxyIn Server	|
 |---------------------------|-------------------|
-| connect(), gets(), write(ProxyIn)| listen(), accept(), read(ProxyIn), write(ProxyOut)|
+| `connect()`, `gets()`, `write(ProxyIn)` | `listen()`, `accept()`, `read(ProxyIn)`, `write(ProxyOut)`|
 
 __Implementation 2: Proxy actively connect and read:__
 
 | 		SockIn Server 		| 	ProxyIn Client	|
 |---------------------------|-------------------|
-| accept(), gets(), write(ProxyIn) | connect(), read(ProxyIn), write(ProxyOut)|
+| `accept()`, `gets()`, `write(ProxyIn)` | `connect()`, `read(ProxyIn)`, `write(ProxyOut)`|
 
 From the above tabulated function call for different implementation, you can see the complexity is similar. All the used function calls are to establish the connection, read arbitrary bytes from sockIn.
 
