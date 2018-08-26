@@ -5,7 +5,6 @@ categories:
   - Algorithm
 tags:
   - Math
-  - Number Representation
 toc: true
 disable_comments: true
 ---
